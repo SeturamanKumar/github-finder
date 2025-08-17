@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
 
 function App(){
+
+  const [username, setUsername] = useState('');
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(event.target.value);
+  };
 
   return(
     <div className="app-container">
@@ -14,8 +20,10 @@ function App(){
             type="text"
             className="search-input"
             placeholder="Enter a GitHub username..."
-            />
-            <button className="search-button">Search</button>
+            value={username}
+            onChange={handleInputChange}
+          />
+          <button className="search-button">Search</button>
         </div>
         <div className="results-container">
           {/*User profile card will go in here in a future step*/}
