@@ -47,3 +47,9 @@
 .results-container{
   margin-top: 2rem;
 }
+
+.error-message{
+  color: #cb2431;
+  font-weight: 500;
+  margin-top: 1rem;
+}
